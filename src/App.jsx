@@ -1,4 +1,3 @@
-import React from "react";
 import PokemonCard from "./components/PokemonCard";
 import "./App.css";
 
@@ -16,7 +15,7 @@ const pokemonList = [
 const App = () => {
   return (
     <div>
-      <PokemonCard pokemon={pokemonList[1]} />
+      <PokemonCard pokemon={pokemonList[0]} />
     </div>
   );
 };
