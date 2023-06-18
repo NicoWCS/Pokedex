@@ -1,6 +1,7 @@
 const NavBar = ({ pokemonIndex, setPokemonIndex, pokemonList }) => {
   return (
     <div>
+      {pokemonIndex === 3 ? alert("pika pikachu !!!") : null}
       {pokemonIndex > 0 ? (
         <button onClick={() => setPokemonIndex(pokemonIndex - 1)}>
           Précédent
