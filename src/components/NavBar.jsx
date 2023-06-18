@@ -1,17 +1,17 @@
-const NavBar = ({ pokemonIndex, setPokemonIndex, pokemonList }) => {
+const NavBar = ({ pokemonList, pokemonIndex, setPokemonIndex }) => {
   return (
     <div>
-      {pokemonIndex === 3 ? alert("pika pikachu !!!") : null}
-      {pokemonIndex > 0 ? (
-        <button onClick={() => setPokemonIndex(pokemonIndex - 1)}>
-          Précédent
+      {pokemonIndex === 3 ? alert(" pika pika !") : null}
+      {pokemonList.map((elem, image) => (
+        <button
+          key={elem.name}
+          onClick={() => {
+            setPokemonIndex((pokemonIndex = image));
+          }}
+        >
+          {elem.name}
         </button>
-      ) : null}
-      {pokemonIndex < pokemonList.length - 1 ? (
-        <button onClick={() => setPokemonIndex(pokemonIndex + 1)}>
-          Suivant
-        </button>
-      ) : null}
+      ))}
     </div>
   );
 };
